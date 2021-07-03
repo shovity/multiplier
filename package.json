@@ -1,0 +1,23 @@
+{
+  "name": "multiplier",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/shovity/multiplier.git",
+  "author": "shovity <shovity@hub_development_1>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node app",
+    "dev": "npx nodemon app",
+    "up": "sh bin/up"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

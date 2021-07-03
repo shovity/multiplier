@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  multiplier:
+    image: multiplier
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 7958:3000
+    restart: always
+
