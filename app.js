@@ -11,7 +11,7 @@ app.use('/static', express.static('static'))
 app.use(express.json())
 
 
-if (config.master) {
+if (!config.master) {
     const io = require('./io')
     io.attach(server)
 

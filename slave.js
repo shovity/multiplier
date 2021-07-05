@@ -2,9 +2,12 @@ const io = require('socket.io-client')
 
 const config = require('./config')
 
-const socket = io(config.socket_uri)
+const socket = io(config.master)
 
 socket.on('order', (handle, data, done) => {
-    handle = eval(handle)
-    done(handle(data))
+    try {
+        done(eval(handle)(data))
+    } catch (e) {
+        done(e)
+    }
 })
